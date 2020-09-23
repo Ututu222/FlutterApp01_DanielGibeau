@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.orange,
+                    color: Colors.amber,
                     border: Border.all(
                       width: 3.0,
                       color: Colors.black,
@@ -115,6 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     decoration: BoxDecoration(color: Colors.yellow),
                     height: 100.0,
                     width: 100.0,
+                    margin: EdgeInsets.all(10.0),
                     child: Align(
                       alignment: Alignment.bottomCenter,
                       child: Text(
@@ -129,6 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.blue,
                     height: 100.0,
                     width: 100.0,
+                    margin: EdgeInsets.all(10.0),
                     child: Align(
                       alignment: Alignment.centerRight,
                       child: Text(
@@ -141,20 +143,39 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Column(
               children: [
-                Container(
-                  height: 100.0,
-                  width: 100.0,
-                  child: Center(
-                    child: Text(
-                      "Container 5",
+                Expanded(
+                  flex: 2,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.black,
+                      border: Border.all(
+                        color: Colors.white,
+                        width: 3.0,
+                      ),
+                    ),
+                    height: 100.0,
+                    width: 100.0,
+                    child: Center(
+                      child: Text(
+                        "Container 5",
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ),
                 ),
-                Container(
-                  height: 100.0,
-                  width: 100.0,
-                  child: Text(
-                    "Con 6",
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    color: Colors.red,
+                    height: 100.0,
+                    width: 100.0,
+                    child: Text(
+                      "Con 6",
+                      style: TextStyle(
+                        fontSize: 30.0,
+                      ),
+                    ),
                   ),
                 ),
               ],
